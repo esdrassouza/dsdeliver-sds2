@@ -1,6 +1,8 @@
 package com.devsuperior.dsdeliver.dto;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.devsuperior.dsdeliver.entities.Product;
 
@@ -12,8 +14,6 @@ public class ProductDTO implements Serializable {
       private Double price;
       private String description;
       private String imageUri;
-      
-      
       
       public ProductDTO() {}
 
@@ -35,7 +35,7 @@ public class ProductDTO implements Serializable {
 		price =entity.getPrice();
 		description = entity.getDescription();
 		imageUri = entity.getImageUri();
-;	}
+  }
 	
 	  
       public Long getId() {
