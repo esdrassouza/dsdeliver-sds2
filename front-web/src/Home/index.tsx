@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {ReactComponent as Banner} from './main.svg';
 import Footer from '../Footer';
 import './styles.css';
@@ -6,7 +7,7 @@ import './styles.css';
 
 const Home   =  () =>{
 return(
-  <>
+<>
  <div className="home-container">
     <section className="home-content">
                  <article className="home-action">
@@ -19,7 +20,7 @@ return(
                               <br/>
                               levaremos em sua porta.
                            </h3>
-                       <a href="#" className="home-btn-order">FAZER PEDIDO</a>
+                           <Link to="/orders" className="home-btn-order">FAZER PEDIDO</Link>
                  </article> 
              <figure>
            <Banner className="home-image svg" />
