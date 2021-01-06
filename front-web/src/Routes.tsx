@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route, Switch, BrowserRouter} from 'react-router-dom';
 import Home from './Home';
-import Orders from './Horders';
+import Orders from './Orders';
 import Navabar from './Navbar';
 
 
