@@ -4,13 +4,13 @@ import Home from './Home';
 import './App.css'
 
 
+
 const App = ()=>{
   return(
     <>
       <Navbar />
-        <Home />
-      
-    </>
+      <Home />
+     </>
   )
 }
 
