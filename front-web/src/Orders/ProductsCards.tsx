@@ -3,42 +3,35 @@ import {Link} from 'react-router-dom';
 import { types } from 'util';
 import ProductsList from './ProductsList';
 import { Product } from './types';
-
+import {formatPrice} from './helpers';
 type Props = {
     product: Product;
+    onSelectProduct: (product : Product) => void;
+    isSelected:boolean;
 }
 
-const formatPrice = (price : number) =>{
-        const formatter = new Intl.NumberFormat('pt-BR',{
-        style:'currency',
-        currency:'BRL',
-        minimumFractionDigits:2
-    });
-    return formatter.format(price);
-}
-const ProductsCards = ({product} : Props)=>{
+
+const ProductsCards = ({ product, onSelectProduct, isSelected} : Props)=>{
     return(
-       
-          <div className="order-card-container">
+          <section className={`order-card-container ${isSelected ? 'selected':''}`}
+            onClick={ () => onSelectProduct(product)}
+             >
               <h3 className="order-card-title">
-                  {product.name}
-              </h3>
-              <img src={product.imageUri} 
-              className="order-card-image"
-               title="Pizza de Calabresa" 
-               alt="Pizza de Calabresa"/>
-            
-                  <h3 className="order-card-price"> {formatPrice(product.price)}</h3>
-                  <div className="order-card-description">
-                      <h3>Descrição</h3>
-                      <p>
-                       {product.description}
-                      </p>
-                  </div>
-              
-          </div>
-       
-    )
+                {product.name}
+                  </h3>
+                   <img src={product.imageUri} 
+                       className="order-card-image"
+                         title="Pizza de Calabresa" 
+                           alt="Pizza de Calabresa"/>
+                           <h3 className="order-card-price"> {formatPrice(product.price)}</h3>
+                              <div className="order-card-description">
+                                 <h3>Descrição</h3>
+                                   <p>
+                                     {product.description}
+                                       </p>
+                                         </div>
+                                          </section>
+    );
 }
 
 

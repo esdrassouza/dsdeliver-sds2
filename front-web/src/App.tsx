@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from './Navbar';
-import Home from './Home';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Routes from './Routes';
 import './App.css'
 
@@ -8,9 +8,10 @@ import './App.css'
 
 const App = ()=>{
   return(
-    
-      <Routes />
-   
+     <>
+       <Routes />
+       <ToastContainer />
+    </>
   )
 }
 
