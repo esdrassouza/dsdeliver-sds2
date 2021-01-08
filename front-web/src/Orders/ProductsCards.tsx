@@ -28,7 +28,6 @@ const ProductsCards = ({product} : Props)=>{
                title="Pizza de Calabresa" 
                alt="Pizza de Calabresa"/>
             
-                  <h1>Fuck You!</h1>
                   <h3 className="order-card-price"> {formatPrice(product.price)}</h3>
                   <div className="order-card-description">
                       <h3>Descrição</h3>
