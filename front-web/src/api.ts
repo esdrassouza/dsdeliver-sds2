@@ -2,6 +2,7 @@ import axios from 'axios';
 import { OrderPayload } from './Orders/types';
 
  const API_URL = 'https://esdras-sds-2.herokuapp.com';
+ 
  const mapboxToken = process.env.REACT_APP_ACCESS_TOKEN_MAP_BOX;
 
 export function fetchProducts(){
