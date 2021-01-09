@@ -1,7 +1,4 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import { types } from 'util';
-import ProductsList from './ProductsList';
+
 import { Product } from './types';
 import {formatPrice} from './helpers';
 type Props = {

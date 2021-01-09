@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {ReactComponent as Banner} from './main.svg';
-import Footer from '../Footer';
 import './styles.css';
 
 
