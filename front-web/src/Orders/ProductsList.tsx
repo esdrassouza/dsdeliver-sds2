@@ -1,5 +1,3 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
 import { checkSelected } from './helpers';
 import ProductsCards from './ProductsCards';
 import { Product } from './types';
