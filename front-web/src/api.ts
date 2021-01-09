@@ -3,7 +3,7 @@ import { OrderPayload } from './Orders/types';
 
  const API_URL = 'https://esdras-sds-2.herokuapp.com';
  
- const mapboxToken = process.env.REACT_APP_ACCESS_TOKEN_MAP_BOX;
+ const mapboxToken = 'pk.eyJ1IjoiZXNkcmFzY3NvdXphIiwiYSI6ImNranFiZ210NzBneDUyeG53c3FlbXhpcXoifQ._TV38EJp8bQlNJJcdpMOXA';
 
 export function fetchProducts(){
      return axios(`${API_URL}/products`);
