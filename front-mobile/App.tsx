@@ -1,9 +1,10 @@
 import { useFonts, OpenSans_400Regular, OpenSans_700Bold } from '@expo-google-fonts/open-sans';
 import AppLoading from 'expo-app-loading';
 import React from 'react';
-import {View ,Image, Text, StyleSheet, StatusBar} from 'react-native';
-import Header from './src/Header';
-import Home from './src/Home';
+import {View , StyleSheet, StatusBar} from 'react-native';
+
+
+import Route from './src/Routes';
 const App = ()=>{
   let [fontsLoaded] = useFonts({
      
@@ -11,27 +12,20 @@ const App = ()=>{
       OpenSans_700Bold
   });
   if(!fontsLoaded){
-          return <AppLoading />
+  return    <AppLoading />
   }
    return(
-     <View  style={styles.container}>
-           <Header/>
-           <Home/>
-        
-   </View>
-   );
+            <Route />
+        );
 
 }
 
 const styles = StyleSheet.create({
  container:{
-   flex:1,
-   
-   marginTop:30,
- },
- banner:{
+    flex:1,
+    backgroundColor:'#fff',
+  }
 
- }
 });
 
 export default App;

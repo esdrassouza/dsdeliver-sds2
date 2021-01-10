@@ -1,46 +1,52 @@
+
 import React from 'react';
-import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import {View, Text, StyleSheet, Image } from 'react-native';
+import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
 
 
 const Header = ()=>{
+    
+    const navigation =  useNavigation();
+    const handleOnPress = ()=>{
+      navigation.navigate('Home');
+    } 
+
    return(
-       <View style={styles.container}>
-           <View style={styles.content}>
-               <Image
+       
+        <TouchableWithoutFeedback onPress={handleOnPress}>
+               <View style={styles.container}>
+              <Image
                 source={require('../assets/logo.png')}
-                style={styles.logo}
                 />
-               <Text style={styles.titulo}>DS Deliver</Text>
-           </View>
-    </View>
+               <Text style={styles.text}>DS Deliver</Text>
+               </View>
+
+        </TouchableWithoutFeedback>
+          
+  
+    
    );
 }
 const styles = StyleSheet.create({
    container:{
-    flex:1,
-    flexDirection:'column',
-},
-   content:{
-    flexDirection:'row',
-    paddingTop:10,
-    justifyContent:'center',
-    alignItems:'center',
     backgroundColor:'#da5c5c',
-    height:80,
-  },
-  logo:{
-      
-  },
-    titulo:{
+    height:90,
+    paddingTop:25,
+    flexDirection:'row',
+    justifyContent:'center',
+},
+ 
+    text:{
         textAlign:'center',
-        fontSize:20,
-        width:100,
+        fontSize:18,
+        color:'#fff',
+        fontWeight:'bold',
         fontFamily:'OpenSans_700Bold',
         letterSpacing:-0.24,
         lineHeight:25,
         marginLeft:5,
-        color:'#fff',
-        fontWeight:'bold',
+      
     },
 
 })
